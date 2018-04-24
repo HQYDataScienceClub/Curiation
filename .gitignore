@@ -2,3 +2,4 @@ env/venv
 env/chromedriver*
 env/credentials.json
 src/appreciation.json
+*.log

@@ -3,14 +3,14 @@ import json
 from selenium import webdriver
 
 
-# Variables
+# Variables, get credentials
 base_url = "https://app.motivosity.com/home/"
 auth = json.load(open('.\env\credentials.json'))
 un = auth['un']
 pw = auth['pw']
 
 
-# Login
+# Login, enter username & password, click sign-in
 if un == "":
     print("You must manually enter credentials into the src\scrape.py script")
     sys.exit()
@@ -33,6 +33,7 @@ chrome.find_element_by_css_selector("span.btn.black.anchor").click()
 chrome.refresh()
 
 # Show More Records
+click_to_show_more = 3
 for i in range(click_to_show_more):
     chrome.find_element_by_css_selector("a.btn.green.small").click()
     chrome.implicitly_wait(5)
