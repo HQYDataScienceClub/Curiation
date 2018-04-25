@@ -36,6 +36,9 @@ Curiation
     |   └─ scrape.py
     └── README.md
 ```
+#### Credentials
+Enter your credentials in the `.\env\credentials.json` file.
+See: `.\env\credentials_example.json` for an example.
 
 #### Scrape
 
