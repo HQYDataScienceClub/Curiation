@@ -6,7 +6,7 @@ For scraping Motivosity, we use the Selenium package:
 
 [Selenium](http://selenium-python.readthedocs.io) uses a webdriver to navigate websites.
 
-Run these commands in PowerShell to download programmatically:
+Run these commands in PowerShell to download the chrome webdriver programmatically:
 
 ```PowerShell
 cd D:\codebase\sandbox\Curiation
@@ -20,27 +20,26 @@ Alternately, download manually from [sites.google.com/a/chromium.org](https://si
 
 ```
 Curiation
+    ├─ docs
     ├─ env
     |   ├─ venv
     |   └─ chromedriver  <–– save chrome webdriver here
     ├─ src
-    |   └─ scrape.py
+    |   └─ Motivosity.py
     └── README.md
 ```
 #### Credentials
-Enter your credentials in the `.\env\credentials.json` file.
-See: `.\env\credentials_example.json` for an example.
+Create a credentials file: `.\env\credentials.json` with your credentials.
+See: `.\env\credentials_example.json` as an example.
 
 #### Scrape
 
-First, you'll need to add authentication credentials to the `src\scrape.py` script.The variables are called `un` and `pw`, and are defined at the top of the script.
-
-Now, run the scrape script:
+To scrape Motivosity, run the scrape script:
 ```PowerShell
 .\env\venv\Scripts\activate.ps1
 python .\src\Motivosity.py
 deactivate
 ```
 
-This will scrape data and save to a file:
-`data\Motivosity-Appreciation.json`
+This will scrape data and save to files:
+`data\Motivosity-Appreciation.json` and `data\Motivosity-Departments.json`
