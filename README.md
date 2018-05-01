@@ -25,7 +25,17 @@ deactivate
 
 [Selenium](http://selenium-python.readthedocs.io) uses a webdriver to navigate websites.
 
-Download manually from [sites.google.com/a/chromium.org](https://sites.google.com/a/chromium.org/chromedriver/) and save under the `env` directory:
+Run these commands in PowerShell to download programmatically:
+
+```PowerShell
+cd D:\codebase\sandbox\Curiation
+$url = "https://chromedriver.storage.googleapis.com/2.38/chromedriver_win32.zip"
+Invoke-WebRequest -Uri $url -OutFile ".\env\chromedriver_win32.zip"
+Expand-Archive .\env\chromedriver_win32.zip -DestinationPath .\env\
+Remove-Item .\env\chromedriver_win32.zip
+```
+
+Alternately, download manually from [sites.google.com/a/chromium.org](https://sites.google.com/a/chromium.org/chromedriver/) and save under the `env` directory:
 
 ```
 Curiation
