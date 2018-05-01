@@ -41,7 +41,6 @@ elements = chrome.find_elements_by_id("feedContainer")
 users = {}
 appreciation = []
 for e in elements:
-    print(e.text)
     bit = {}
     bit['readabledate'] = e.find_element_by_css_selector("div.post-time.ng-binding").text
     bit['receiver_name'] = e.find_element_by_class_name('post-name').text
