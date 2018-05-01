@@ -1,5 +1,5 @@
 env/venv
 env/chromedriver*
 env/credentials.json
-src/appreciation.json
+data/Motivosity-Appreciation.json
 *.log
