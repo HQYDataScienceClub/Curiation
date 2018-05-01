@@ -33,17 +33,17 @@ chrome.find_element_by_css_selector("span.btn.black.anchor").click()
 chrome.refresh()
 
 # Show More Records
-click_to_show_more = 3
+click_to_show_more = 10
 for i in range(click_to_show_more):
     chrome.find_element_by_css_selector("a.btn.green.small").click()
-    chrome.implicitly_wait(5)
+    chrome.implicitly_wait(2)
 
 
 # Scrape Appreciation elements
 elements = chrome.find_elements_by_id("feedContainer")
 
-
 # Gather Appreciation attributes
+
 appreciation = []
 for element in elements:
     bit = {}
@@ -53,12 +53,13 @@ for element in elements:
     appreciation.append(bit)
 
 
+
 # Save file to disk
-filepath = os.path.join(os.getcwd(), 'src', 'appreciation.json')
+filepath = os.path.join(os.getcwd(), 'data', 'Motivosity-Appreciation.json')
 with open(filepath, 'w') as outfile:
     json.dump(appreciation, outfile)
 
 
 # Clean up
 chrome.close()
-print("Scraping complete. See src/appreication ")
+print("Scraping complete. See data/Motivosity-Appreciation.json ")

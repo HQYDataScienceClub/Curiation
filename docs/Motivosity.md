@@ -55,9 +55,9 @@ First, you'll need to add authentication credentials to the `src\scrape.py` scri
 Now, run the scrape script:
 ```PowerShell
 .\env\venv\Scripts\activate.ps1
-python .\src\scrape.py
+python .\src\Motivosity.py
 deactivate
 ```
 
 This will scrape data and save to a file:
-`src\appreciation.json`
+`data\Motivosity-Appreciation.json`
